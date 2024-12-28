@@ -2,7 +2,7 @@ import streamlit as st
 import chatbot_backend as demo  # Importing the chatbot functions from backend
 
 # Set title of the chatbot interface
-st.title("Hi, This is Chatbot Shikhar :sunglasses:")
+st.title("Hi, This is Chatbot Adedayo Ademuyiwa :sunglasses:")
 
 # Initialize LangChain memory in session state if not already done
 if 'memory' not in st.session_state:
