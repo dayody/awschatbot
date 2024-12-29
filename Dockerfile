@@ -18,7 +18,7 @@ EXPOSE 5000
 
 # Define environment variable
 ENV FLASK_APP=chat_backend.py
-ENV FLASK_APP=chat_backend.py
+ENV FLASK_APP=chat_frontend.py
 
 # Run chatbot_frontend.py when the container launches
 CMD ["streamlit", "run", ".\chatbot_frontend.py", "--server.port=5000", "--server.address=0.0.0.0"]
