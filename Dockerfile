@@ -9,12 +9,16 @@ COPY . .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install streamlit
+RUN pip install langchain
+RUN pip install langchain_aws
 
 # Make port 5000 available to the world outside this container
 EXPOSE 5000
 
 # Define environment variable
-ENV FLASK_APP=app.py
+ENV FLASK_APP=chat_backend.py
+ENV FLASK_APP=chat_backend.py
 
-# Run app.py when the container launches
+# Run chatbot_frontend.py when the container launches
 CMD ["streamlit", "run", ".\chatbot_frontend.py", "--server.port=5000", "--server.address=0.0.0.0"]
